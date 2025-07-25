@@ -7,7 +7,7 @@
 
 ชื่อ-สกุล : กิตติพงศ์ ไชยายอง
 
-GitHub Page URL :
+GitHub Page URL : [GitHubPage:Kittipong](https://cpe207-2568.github.io/lab07v2-Kurisu001/)
 
 ---
 
