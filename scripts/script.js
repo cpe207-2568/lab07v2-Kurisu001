@@ -101,7 +101,7 @@ submitBtn.onclick = () => {
     
   }
 
-  if (!checkValid) alert("Registered successfully");
+  if (checkValid) alert("Registered successfully");
 };
 
 resetBtn.onclick = () => {
