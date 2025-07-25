@@ -52,14 +52,18 @@ passwordConfirmInput.onkeyup = () => {
 
 // add callback function for submit button.
 submitBtn.onclick = () => {
-  checkValid = false
+  firstNameOk = false
+  lastNameOk = false
+  emailOk = false
+  passwordOk = false
+  passwordCon = false
 
   // validate first name
   if (firstNameInput.value.trim() === "") {
     firstNameInput.classList.add("is-invalid");
-    checkValid =  true
     
   } else {
+    firstNameOk = true
     firstNameInput.classList.add("is-valid");
     
   }
@@ -67,26 +71,26 @@ submitBtn.onclick = () => {
   // validate last name
   if (lastNameInput.value.trim() === "") {
     lastNameInput.classList.add("is-invalid");
-    checkValid = true
   } else {
     lastNameInput.classList.add("is-valid");
+    lastNameOk = true
     
   }
 
   // validate email
   if (validateEmail(emailInput.value)) {
     emailInput.classList.add("is-valid");
+    emailOk = true
   } else {
     emailInput.classList.add("is-invalid");
-    checkValid = true
     
   }
 
   // validate password
   if (validatePassword(passwordInput)) {
     passwordInput.classList.add("is-valid");
+    passwordOk = true
   } else {
-    checkValid = true
     passwordInput.classList.add("is-invalid");
     
   }
@@ -95,13 +99,13 @@ submitBtn.onclick = () => {
   // validate confirm password
   if (validatePasswordComfirm(passwordInput,passwordConfirmInput)) {
     passwordConfirmInput.classList.add("is-valid");
+    passwordCon = true
   } else {
     passwordConfirmInput.classList.add("is-invalid");
-    checkValid = true
     
   }
 
-  if (checkValid) alert("Registered successfully");
+  if (firstNameOk&&lastNameOk&&emailOk&&passwordOk&&passwordCon) alert("Registered successfully");
 };
 
 resetBtn.onclick = () => {
